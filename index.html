@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formation Informatique pour Tous</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("0qE0EQqxwPDwH31qV");
+    })();
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+
+  <header class="bg-blue-600 text-white py-6">
+    <div class="max-w-4xl mx-auto px-4">
+      <h1 class="text-3xl font-bold">Formation Informatique pour Tous</h1>
+      <p class="mt-2 text-lg">Pour particuliers, professionnels, &eacute;tudiants et enfants d&eacute;s 7 ans</p>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
+
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">🧩 &Agrave; propos</h2>
+      <p>
+        D&eacute;veloppeur Web Senior et formateur passionn&eacute;, je mets plus de 10 ans d'exp&eacute;rience au service de tous ceux qui souhaitent apprendre ou progresser en informatique, quel que soit leur &acirc;ge ou leur niveau.
+      </p>
+      <p class="mt-2">
+        Avec une approche bienveillante, claire et ludique, je propose des formations sur mesure pour que chacun puisse se sentir &agrave; l'aise et progresser &agrave; son rythme.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-4">📚 Formations propos&eacute;es</h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="text-xl font-medium text-blue-500">💻 Programmation</h3>
+          <ul class="list-disc ml-6 mt-2 space-y-1">
+            <li>Initiation web : HTML, CSS, PHP, JS</li>
+            <li>Conception logicielle &amp; frameworks PHP</li>
+            <li>Mont&eacute;e en comp&eacute;tences (dev junior &agrave; senior)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-medium text-blue-500">🖱️ Outils num&eacute;riques</h3>
+          <ul class="list-disc ml-6 mt-2 space-y-1">
+            <li>Prise en main de l'ordinateur (Windows, Internet)</li>
+            <li>S&eacute;curit&eacute;, bureautique, autonomie num&eacute;rique</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-xl font-medium text-blue-500">🎮 Enfants d&eacute;s 7 ans</h3>
+          <ul class="list-disc ml-6 mt-2 space-y-1">
+            <li>D&eacute;couverte du code (Scratch, Blockly)</li>
+            <li>Logique et jeux cr&eacute;atifs</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">🧾 Pr&eacute;requis</h2>
+      <ul class="list-disc ml-6 mt-2 space-y-1">
+        <li>Un ordinateur avec une connexion Internet</li>
+        <li>Savoir lire et &eacute;crire (pour les enfants)</li>
+        <li>Curiosit&eacute; et envie d'apprendre !</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-semibold text-blue-600 mb-2">📬 Me contacter</h2>
+      <form class="bg-white p-6 rounded-lg shadow space-y-4">
+        <div>
+          <label class="block font-medium">Nom</label>
+          <input type="text" name="name" placeholder="Votre nom" class="w-full mt-1 border rounded px-3 py-2" required>
+        </div>
+        <div>
+          <label class="block font-medium">Email</label>
+          <input type="email" name="email" placeholder="Votre email" class="w-full mt-1 border rounded px-3 py-2" required>
+        </div>
+        <div>
+          <label class="block font-medium">Message</label>
+          <textarea name="message" rows="4" placeholder="Votre message" class="w-full mt-1 border rounded px-3 py-2" required></textarea>
+        </div>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          Envoyer
+        </button>
+      </form>
+      <p class="mt-4 text-sm text-gray-500">Ou contactez-moi directement &agrave; : <strong>formationsinformatiquepourtous@gmail.com</strong></p>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-sm text-gray-500 py-6 bg-gray-100">
+    © 2025 - Formation Informatique pour Tous
+  </footer>
+  <script>
+  document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm('service_0sskx1c', 'template_fbtnx6g', this)
+      .then(function() {
+          alert('Message envoyé avec succès !');
+      }, function(error) {
+          alert('Erreur : ' + JSON.stringify(error));
+      });
+  });
+</script>
+</body>
+</html>
