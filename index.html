@@ -19,6 +19,27 @@
       <h1 class="text-3xl font-bold">Formation Informatique pour Tous</h1>
       <p class="mt-2 text-lg">Pour particuliers, professionnels, &eacute;tudiants et enfants d&egrave;s 7 ans</p>
     </div>
+
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="https://ftripoli.github.io/formations/" class="text-xl font-semibold">Formation Informatique pour Tous</a>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="#about" class="hover:text-gray-300 transition">À propos</a>
+        <a href="https://github.com/ftripoli" target="_blank" class="hover:text-gray-300 transition">Mon GitHub</a>
+        <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="hover:text-gray-300">Mon linkedIn</a>
+        <a href="#contact" class="hover:text-gray-300 transition">Contact</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+      <a href="#about" class="block py-2 hover:text-gray-300">À propos</a>
+      <a href="https://github.com/ftripoli" target="_blank" class="block py-2 hover:text-gray-300">Mon GitHub</a>
+      <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="block py-2 hover:text-gray-300">Mon linkedIn</a>
+      <a href="#contact" class="block py-2 hover:text-gray-300">Contact</a>
+    </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
@@ -26,10 +47,25 @@
     <section>
       <h2 class="text-2xl font-semibold text-blue-600 mb-2">🧩 &Agrave; propos</h2>
       <p>
-        D&eacute;veloppeur Web Senior et formateur passionn&eacute;, je mets plus de 10 ans d'exp&eacute;rience au service de tous ceux qui souhaitent apprendre ou progresser en informatique, quel que soit leur &acirc;ge ou leur niveau.
+        Au service de tous ceux qui souhaitent apprendre et/ou progresser en informatique, quel que soit leur &acirc;ge ou leur niveau.
       </p>
-      <p class="mt-2">
+      <p class="mt-4">
         Avec une approche bienveillante, claire et ludique, je propose des formations sur mesure pour que chacun puisse se sentir &agrave; l'aise et progresser &agrave; son rythme.
+      </p>
+      <p class="mt-4">
+        Passionn&eacute; par la transmission du savoir, je propose des formations accessibles et personnalis&eacute;es en programmation, outils num&eacute;riques, et logique informatique.
+      </p>
+      <p class="mt-4">
+        Mes s&eacute;ances sont con&ccedil;ues pour s’adapter au rythme, au niveau et aux objectifs de chacun.
+      </p>
+      <p class="mt-4">
+        Gr&acirc;ce &agrave; une approche bienveillante, ludique et vulgaris&eacute;e, j’aide chacun &agrave; progresser en confiance, que ce soit pour apprendre un langage informatique, se mettre &agrave; l’aise avec un ordinateur ou d&eacute;couvrir les bases de la logique.
+      </p>
+      <p class="mt-4">
+        Toutes les formations se font &agrave; distance, en visio, avec un simple ordinateur et une connexion Internet.
+      </p>
+      <p class="mt-4">
+        Venez apprendre &agrave; votre rythme, dans une ambiance conviviale et professionnelle !
       </p>
     </section>
 
@@ -73,9 +109,49 @@
       </ul>
     </section>
 
+    <section id="about" class="bg-white py-20 px-6 md:px-12">
+      <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-8">&agrave; propos de moi</h2>
+        <div class="text-gray-700 text-lg leading-relaxed">
+          <p class="mt-4">
+            D&eacute;veloppeur web senior depuis plus de 10 ans, je mets aujourd’hui mon expertise au service de la formation pour tous.
+          </p>
+
+          <p class="mt-4">
+            Polyvalent, patient et passionn&eacute; par la transmission, j’ai accompagn&eacute; des &eacute;quipes techniques vari&eacute;es tout au long de ma carri&egrave;re, en d&eacute;veloppant des applications web complexes, souvent avec des frameworks sur-mesure.
+          </p>
+
+          <p class="mt-4">
+            Ce parcours m’a permis d’affiner une forte capacit&eacute; d’adaptation, mais surtout de d&eacute;couvrir ce qui m’anime le plus : <strong>aider les autres &agrave; comprendre et progresser</strong>.
+          </p>
+
+          <p class="mt-4">
+            Aujourd’hui, je propose des formations individuelles ou en petit groupe, destin&eacute;es aux <strong>particuliers</strong>, <strong>professionnels</strong>, <strong>&eacute;tudiants</strong>, ou même <strong>enfants d&egrave;s 7 ans</strong>, avec des contenus personnalis&eacute;s et une p&eacute;dagogie accessible.
+          </p>
+
+          <p class="mt-16">
+          💡 Je forme &agrave; :
+            <ul class="list-disc list-inside text-left inline-block text-gray-700">
+              <li>La programmation web (PHP, HTML, CSS, JavaScript...)</li>
+              <li>La programmation (C, Puthon, JavaScript...)</li>
+              <li>L’initiation &agrave; l’informatique et aux outils num&eacute;riques</li>
+              <li>L’apprentissage de la logique informatique pour les plus jeunes</li>
+            </ul>
+          </p>
+          <p class="mt-16">
+            En pr&eacute;sentiel (&agrave; domicile) ou &agrave; distance, je vous accompagne pas &agrave; pas, avec une approche humaine, bienveillante et toujours adapt&eacute;e &agrave; votre rythme.
+          </p>
+
+          <p class="mt-4">
+            Ma mission : <strong>vous rendre autonome, &agrave; l’aise avec la technologie, et fier de vos progr&egrave;s</strong>.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <section>
       <h2 class="text-2xl font-semibold text-blue-600 mb-2">📬 Me contacter</h2>
-      <form class="bg-white p-6 rounded-lg shadow space-y-4">
+      <form id="contact-form" class="bg-white p-6 rounded-lg shadow space-y-4">
         <div>
           <label class="block font-medium">Nom</label>
           <input type="text" name="name" placeholder="Votre nom" class="w-full mt-1 border rounded px-3 py-2" required>
@@ -111,6 +187,6 @@
           alert('Erreur : ' + JSON.stringify(error));
       });
   });
-</script>
+  </script>
 </body>
 </html>
