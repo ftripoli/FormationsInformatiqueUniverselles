@@ -47,5 +47,5 @@ Le site est hébergé gratuitement grâce à GitHub Pages. Pour le consulter :
 
 ```bash
 git clone https://github.com/ftripoli/formations.git
-cd mon-site-formation
+cd formations
 # Ouvre index.html dans ton navigateur ou utilise un serveur local
