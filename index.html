@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Formation Informatique pour Tous</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
@@ -11,22 +11,86 @@
       emailjs.init("0qE0EQqxwPDwH31qV");
     })();
   </script>
+  <style>
+    .menu-link
+    {
+        position: relative;
+        display: inline-block;
+    }
+    .tooltip
+    {
+        visibility: hidden;
+        opacity: 0;
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: -150%; /* Positionner le tooltip au-dessus */
+        left: 50%;
+        transform: translateX(-50%);
+        transition: opacity 0.3s ease;
+        font-size: 0.9rem;
+        white-space: nowrap; /* Empêcher les retours à la ligne */
+        width: auto; /* Assurer que la largeur s'adapte au contenu */
+        max-width: 200px; /* Limiter la largeur maximale si nécessaire */
+    }
+    .menu-link:hover .tooltip
+    {
+        visibility: visible;
+        opacity: 1;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
-
   <header class="bg-blue-600 text-white py-6">
     <div class="max-w-4xl mx-auto px-4">
       <h1 class="text-3xl font-bold">Formation Informatique pour Tous</h1>
       <p class="mt-2 text-lg">Pour particuliers, professionnels, &eacute;tudiants et enfants d&egrave;s 7 ans</p>
     </div>
-
-    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <a href="https://ftripoli.github.io/formations/" class="text-xl font-semibold">Formation Informatique pour Tous</a>
+    <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-3xl font-bold">
+        <a href="https://ftripoli.github.io/formations/" class="text-xl font-semibold">Formation Informatique pour Tous</a>
+      </h1>
       <nav class="space-x-6 hidden md:flex">
-        <a href="#about" class="hover:text-gray-300 transition">À propos</a>
-        <a href="https://github.com/ftripoli" target="_blank" class="hover:text-gray-300 transition">Mon GitHub</a>
-        <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="hover:text-gray-300">Mon linkedIn</a>
-        <a href="#contact" class="hover:text-gray-300 transition">Contact</a>
+        <a href="https://github.com/ftripoli" target="_blank" class="menu-link">
+          <span class="emoji">🐙</span>
+          <span class="tooltip">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="menu-link">
+          <span class="emoji">💼</span>
+          <span class="tooltip">LinkedIn</span>
+        </a>
+        <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="menu-link">
+          <span class="emoji">🎓</span>
+          <span class="tooltip">Superprof</span>
+        </a>
+        <a href="#about" class="menu-link">
+          <span class="emoji">🧩</span>
+          <span class="tooltip">&Agrave; propos</span>
+        </a>
+        <a href="#formations" class="menu-link">
+          <span class="emoji">📚</span>
+          <span class="tooltip">Formations propos&eacute;es</span>
+        </a>
+        <a href="#requirements" class="menu-link">
+          <span class="emoji">🧾</span>
+          <span class="tooltip">Pr&eacute;requis</span>
+        </a>
+        <a href="#about_me" class="menu-link">
+          <span class="emoji">🔎</span>
+          <span class="tooltip">&Agrave; propos de moi</span>
+        </a>
+        <a href="#booking" class="menu-link">
+          <span class="emoji">📅</span>
+          <span class="tooltip">R&eacute;server un cours</span>
+        </a>
+        <a href="#contact" class="menu-link">
+          <span class="emoji">✉️</span>
+          <span class="tooltip">Contact</span>
+        </a>
       </nav>
       <button id="menu-toggle" class="md:hidden focus:outline-none">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -35,83 +99,106 @@
       </button>
     </div>
     <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-      <a href="#about" class="block py-2 hover:text-gray-300">À propos</a>
-      <a href="https://github.com/ftripoli" target="_blank" class="block py-2 hover:text-gray-300">Mon GitHub</a>
-      <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="block py-2 hover:text-gray-300">Mon linkedIn</a>
-      <a href="#contact" class="block py-2 hover:text-gray-300">Contact</a>
+      <a href="https://github.com/ftripoli" target="_blank" class="block py-2 hover:text-gray-300">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="block py-2 hover:text-gray-300">💼 LinkedIn</a>
+      <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="menu-link">🎓 Superprof</a>
+      <a href="#about" class="block py-2 hover:text-gray-300">🧩 &Agrave; propos</a>
+      <a href="#formations" class="block py-2 hover:text-gray-300">📚 Formations propos&eacute;es</a>
+      <a href="#requirements" class="block py-2 hover:text-gray-300">🧾 Pr&eacute;requis</a>
+      <a href="#about_me" class="block py-2 hover:text-gray-300">🔎 &Agrave; propos de moi</a>
+      <a href="#booking" class="block py-2 hover:text-gray-300">📅 R&eacute;server un cours</a>
+      <a href="#contact" class="block py-2 hover:text-gray-300">✉️ Contact</a>
     </div>
   </header>
 
   <main class="max-w-4xl mx-auto px-4 py-10 space-y-12">
-
-    <section>
-      <h2 class="text-2xl font-semibold text-blue-600 mb-2">🧩 &Agrave; propos</h2>
-      <p>
-        Au service de tous ceux qui souhaitent apprendre et/ou progresser en informatique, quel que soit leur &acirc;ge ou leur niveau.
-      </p>
-      <p class="mt-4">
-        Avec une approche bienveillante, claire et ludique, je propose des formations sur mesure pour que chacun puisse se sentir &agrave; l'aise et progresser &agrave; son rythme.
-      </p>
-      <p class="mt-4">
-        Passionn&eacute; par la transmission du savoir, je propose des formations accessibles et personnalis&eacute;es en programmation, outils num&eacute;riques, et logique informatique.
-      </p>
-      <p class="mt-4">
-        Mes s&eacute;ances sont con&ccedil;ues pour s’adapter au rythme, au niveau et aux objectifs de chacun.
-      </p>
-      <p class="mt-4">
-        Gr&acirc;ce &agrave; une approche bienveillante, ludique et vulgaris&eacute;e, j’aide chacun &agrave; progresser en confiance, que ce soit pour apprendre un langage informatique, se mettre &agrave; l’aise avec un ordinateur ou d&eacute;couvrir les bases de la logique.
-      </p>
-      <p class="mt-4">
-        Toutes les formations se font &agrave; distance, en visio, avec un simple ordinateur et une connexion Internet.
-      </p>
-      <p class="mt-4">
-        Venez apprendre &agrave; votre rythme, dans une ambiance conviviale et professionnelle !
-      </p>
+    <section id="about">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-3xl font-bold mb-4 text-center">🧩 &Agrave; propos</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Au service de tous ceux qui souhaitent apprendre et/ou progresser en informatique, quel que soit leur &acirc;ge ou leur niveau.
+        </p>
+        <p class="mt-4">
+          Avec une approche bienveillante, claire et ludique, je propose des formations sur mesure pour que chacun puisse se sentir &agrave; l'aise et progresser &agrave; son rythme.
+        </p>
+        <p class="mt-4">
+          Passionn&eacute; par la transmission du savoir, je propose des formations accessibles et personnalis&eacute;es en programmation, outils num&eacute;riques, et logique informatique.
+        </p>
+        <p class="mt-4">
+          Mes s&eacute;ances sont con&ccedil;ues pour s’adapter au rythme, au niveau et aux objectifs de chacun.
+        </p>
+        <p class="mt-4">
+          Gr&acirc;ce &agrave; une approche bienveillante, ludique et vulgaris&eacute;e, j’aide chacun &agrave; progresser en confiance, que ce soit pour apprendre un langage informatique, se mettre &agrave; l’aise avec un ordinateur ou d&eacute;couvrir les bases de la logique.
+        </p>
+        <p class="mt-4">
+          Toutes les formations se font &agrave; distance, en visio, avec un simple ordinateur et une connexion Internet.
+        </p>
+        <p class="mt-4">
+          Venez apprendre &agrave; votre rythme, dans une ambiance conviviale et professionnelle !
+        </p>
+      </div>
     </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold text-blue-600 mb-4">📚 Formations propos&eacute;es</h2>
+    <section id="formations">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-3xl font-bold mb-4 text-center">📚 Formations propos&eacute;es</h2>
 
-      <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <h3 class="text-xl font-medium text-blue-500">💻 Programmation</h3>
-          <ul class="list-disc ml-6 mt-2 space-y-1">
-            <li>Initiation web : HTML, CSS, PHP, JS</li>
-            <li>Conception logicielle &amp; frameworks PHP</li>
-            <li>Mont&eacute;e en comp&eacute;tences (dev junior &agrave; senior)</li>
-          </ul>
-        </div>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="text-gray-700 text-lg leading-relaxed">
+            <h3 class="text-xl font-semibold">🖱️ Outils num&eacute;riques</h3>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>Prise en main de l'ordinateur</li>
+              <li>Utilisation d'Internet</li>
+              <li>S&eacute;curit&eacute; et bonnes pratique</li>
+              <li>Bureautique, autonomie num&eacute;rique</li>
+            </ul>
+          </div>
 
-        <div>
-          <h3 class="text-xl font-medium text-blue-500">🖱️ Outils num&eacute;riques</h3>
-          <ul class="list-disc ml-6 mt-2 space-y-1">
-            <li>Prise en main de l'ordinateur (Windows, Internet)</li>
-            <li>S&eacute;curit&eacute;, bureautique, autonomie num&eacute;rique</li>
-          </ul>
-        </div>
+          <div class="text-gray-700 text-lg leading-relaxed">
+            <h3 class="text-xl font-semibold">💻 Programmation</h3>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>La Conception web (HTML, CSS...)</li>
+              <li>La Programmation (PHP, JS, C, Python...)</li>
+              <li>La M&eacute;thodologie (Design, Merise, UML, TDD...)</li>
+              <li>L'Algorithmie et les Designs Patterns</li>
+            </ul>
+          </div>
 
-        <div>
-          <h3 class="text-xl font-medium text-blue-500">🎮 Enfants d&egrave;s 7 ans</h3>
-          <ul class="list-disc ml-6 mt-2 space-y-1">
-            <li>D&eacute;couverte du code (Scratch, Blockly)</li>
-            <li>Logique et jeux cr&eacute;atifs</li>
-          </ul>
+          <div class="text-gray-700 text-lg leading-relaxed">
+            <h3 class="text-xl font-semibold">🎮 Enfants d&egrave;s 7 ans</h3>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>D&eacute;couverte du code (Scratch, Blockly)</li>
+              <li>Logique et jeux cr&eacute;atifs</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold text-blue-600 mb-2">🧾 Pr&eacute;requis</h2>
-      <ul class="list-disc ml-6 mt-2 space-y-1">
-        <li>Un ordinateur avec une connexion Internet</li>
-        <li>Savoir lire et &eacute;crire (pour les enfants)</li>
-        <li>Curiosit&eacute; et envie d'apprendre !</li>
-      </ul>
+    <section id="requirements">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-3xl font-bold mb-4 text-center">🧾 Pr&eacute;requis</h2>
+        <div class="text-gray-700 text-lg leading-relaxed">
+          <p class="mt-4">
+            💡 Pas besoin d’être un expert ou d’avoir du mat&eacute;riel compliqu&eacute; !
+          </p>
+          <p class="mt-4">
+            Voici simplement ce qu’il vous faut pour profiter pleinement des cours :
+          </p>
+          <div class="mt-4">
+            <ul class="list-disc list-inside text-left inline-block text-gray-700">
+              <li>Un ordinateur avec une connexion Internet</li>
+              <li>Savoir lire et &eacute;crire (pour les enfants)</li>
+              <li>Curiosit&eacute; et envie d'apprendre !</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="about" class="bg-white py-20 px-6 md:px-12">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-4xl font-bold text-gray-800 mb-8">&agrave; propos de moi</h2>
+    <section id="about_me">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-3xl font-bold mb-4 text-center">🔎 &Agrave; propos de moi</h2>
         <div class="text-gray-700 text-lg leading-relaxed">
           <p class="mt-4">
             D&eacute;veloppeur web senior depuis plus de 10 ans, je mets aujourd’hui mon expertise au service de la formation pour tous.
@@ -122,71 +209,86 @@
           </p>
 
           <p class="mt-4">
-            Ce parcours m’a permis d’affiner une forte capacit&eacute; d’adaptation, mais surtout de d&eacute;couvrir ce qui m’anime le plus : <strong>aider les autres &agrave; comprendre et progresser</strong>.
+            Ce parcours m’a permis d’affiner une forte capacit&eacute; d’adaptation, mais surtout de d&eacute;couvrir ce qui m’anime le plus : <strong class="font-semibold">aider les autres &agrave; comprendre et progresser</strong>.
           </p>
 
           <p class="mt-4">
-            Aujourd’hui, je propose des formations individuelles ou en petit groupe, destin&eacute;es aux <strong>particuliers</strong>, <strong>professionnels</strong>, <strong>&eacute;tudiants</strong>, ou même <strong>enfants d&egrave;s 7 ans</strong>, avec des contenus personnalis&eacute;s et une p&eacute;dagogie accessible.
+            Aujourd’hui, je propose des formations individuelles ou en petit groupe, destin&eacute;es aux <strong class="font-semibold">particuliers</strong>, <strong class="font-semibold">professionnels</strong>, <strong class="font-semibold">&eacute;tudiants</strong>, ou même <strong class="font-semibold">enfants d&egrave;s 7 ans</strong>, avec des contenus personnalis&eacute;s et une p&eacute;dagogie accessible.
           </p>
 
-          <p class="mt-16">
-          💡 Je forme &agrave; :
-            <ul class="list-disc list-inside text-left inline-block text-gray-700">
-              <li>La programmation web (PHP, HTML, CSS, JavaScript...)</li>
-              <li>La programmation (C, Puthon, JavaScript...)</li>
-              <li>L’initiation &agrave; l’informatique et aux outils num&eacute;riques</li>
-              <li>L’apprentissage de la logique informatique pour les plus jeunes</li>
-            </ul>
-          </p>
-          <p class="mt-16">
+          <p class="mt-8">
             En pr&eacute;sentiel (&agrave; domicile) ou &agrave; distance, je vous accompagne pas &agrave; pas, avec une approche humaine, bienveillante et toujours adapt&eacute;e &agrave; votre rythme.
           </p>
 
           <p class="mt-4">
-            Ma mission : <strong>vous rendre autonome, &agrave; l’aise avec la technologie, et fier de vos progr&egrave;s</strong>.
+            Ma mission : <strong class="font-semibold">vous rendre autonome, &agrave; l’aise avec la technologie, et fier de vos progr&egrave;s</strong>.
           </p>
         </div>
       </div>
     </section>
 
-    <section>
-      <h2 class="text-2xl font-semibold text-blue-600 mb-2">📬 Me contacter</h2>
-      <form id="contact-form" class="bg-white p-6 rounded-lg shadow space-y-4">
-        <div>
-          <label class="block font-medium">Nom</label>
-          <input type="text" name="name" placeholder="Votre nom" class="w-full mt-1 border rounded px-3 py-2" required>
+    <section id="booking">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-3xl font-bold mb-4 text-center">📅 R&eacute;server un cours</h2>
+        <p class="text-gray-600 mb-6">
+          R&eacute;servez directement une s&eacute;ance de formation via ma page Superprof. Que vous soyez d&eacute;butant, &eacute;tudiant, professionnel ou enfant à partir de 7 ans, je vous accompagne à votre rythme !
+        </p>
+        <div class="flex justify-center items-center">
+          <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+            Acc&eacute;der à ma page Superprof
+          </a>
         </div>
-        <div>
-          <label class="block font-medium">Email</label>
-          <input type="email" name="email" placeholder="Votre email" class="w-full mt-1 border rounded px-3 py-2" required>
-        </div>
-        <div>
-          <label class="block font-medium">Message</label>
-          <textarea name="message" rows="4" placeholder="Votre message" class="w-full mt-1 border rounded px-3 py-2" required></textarea>
-        </div>
-        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-          Envoyer
-        </button>
-      </form>
-      <p class="mt-4 text-sm text-gray-500">Ou contactez-moi directement &agrave; : <strong>formationsinformatiquepourtous@gmail.com</strong></p>
+      </div>
     </section>
 
+    <section id="contact">
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h2 class="text-3xl font-bold mb-4 text-center">✉️ Me contacter</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Vous pouvez m’&eacute;crire directement via ce formulaire pour poser une question, planifier un rendez-vous ou r&eacute;server un cours en direct avec moi.
+        </p>
+        <form id="contact-form" class="space-y-4">
+          <div>
+            <label class="block font-medium">Nom</label>
+            <input type="text" name="name" placeholder="Votre nom" class="w-full mt-1 border rounded px-3 py-2" required>
+          </div>
+          <div>
+            <label class="block font-medium">Email</label>
+            <input type="email" name="email" placeholder="Votre email" class="w-full mt-1 border rounded px-3 py-2" required>
+          </div>
+          <div>
+            <label class="block font-medium">Message</label>
+            <textarea name="message" rows="4" placeholder="Votre message" class="w-full mt-1 border rounded px-3 py-2" required></textarea>
+          </div>
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+            Envoyer
+          </button>
+        </form>
+      </div>
+      <p class="mt-4 text-sm text-gray-500">Ou contactez-moi directement &agrave; : <strong class="font-semibold">formationsinformatiquepourtous@gmail.com</strong></p>
+    </section>
   </main>
 
   <footer class="text-center text-sm text-gray-500 py-6 bg-gray-100">
     © 2025 - Formation Informatique pour Tous
   </footer>
-  <script>
-  document.getElementById('contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
 
-    emailjs.sendForm('service_0sskx1c', 'template_fbtnx6g', this)
-      .then(function() {
-          alert('Message envoyé avec succès !');
-      }, function(error) {
-          alert('Erreur : ' + JSON.stringify(error));
-      });
-  });
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      emailjs.sendForm('service_0sskx1c', 'template_fbtnx6g', this)
+        .then(function() {
+            alert('Message envoyé avec succès !');
+        }, function(error) {
+            alert('Erreur : ' + JSON.stringify(error));
+        });
+    });
   </script>
 </body>
 </html>
