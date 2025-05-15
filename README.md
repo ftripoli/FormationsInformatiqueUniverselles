@@ -1,4 +1,4 @@
-# 🌐 Site de formation informatique pour tous
+# 🌐 Site de Formation Informatique Universselles
 
 Bienvenue sur le dépôt de mon site vitrine dédié à mes activités de formation en informatique. Je propose des formations accessibles, personnalisées et bienveillantes pour tous les profils, des enfants dès 7 ans aux professionnels souhaitant renforcer leurs compétences.
 

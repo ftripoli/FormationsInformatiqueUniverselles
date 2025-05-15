@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formation Informatique pour Tous</title>
+  <title>Formation Informatique Universelles</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
@@ -45,67 +45,107 @@
   </style>
 </head>
 <body id="top" class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
-  <header class="bg-blue-600 text-white py-6">
-    <div class="max-w-4xl mx-auto px-4">
-      <h1 class="text-3xl font-bold">Formation Informatique pour Tous</h1>
+  <header class="bg-blue-600 text-white shadow py-6 p-4">
+    <div class="max-w-4xl mx-auto px-4 hidden md:block">
+      <h1 class="text-3xl font-bold">
+        <a href="https://ftripoli.github.io/FormationsInformatiqueUniverselles/" class="menu-link">
+          <span class="text-red-600">F</span>ormation <span class="text-red-600">I</span>nformatique <span class="text-red-600">U</span>niverselles
+          <span class="tooltip">F.I.U.</span>
+        </a>
+      </h1>
       <p class="mt-2 text-lg">Pour particuliers, professionnels, &eacute;tudiants et enfants d&egrave;s 7 ans</p>
     </div>
-    <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-3xl font-bold">
-        <a href="https://ftripoli.github.io/formations/" class="text-xl font-semibold">🤖</a>
+    <div class="flex items-center justify-between w-full text-right">
+      <!-- Premier élément titre -->
+      <h1 class="md:hidden flex-1 text-left text-1xl font-bold">
+        <a href="https://ftripoli.github.io/FormationsInformatiqueUniverselles/" class="menu-link">
+          🤖&nbsp;
+          <span class="tooltip">F.I.U.</span>
+          <span class="text-red-600">F</span>ormation <span class="text-red-600">I</span>nformatique <span class="text-red-600">U</span>niverselles
+        </a>
       </h1>
-      <nav class="space-x-6 hidden md:flex">
-        <a href="https://github.com/ftripoli" target="_blank" class="menu-link">
-          <span class="emoji">🐙</span>
-          <span class="tooltip">GitHub</span>
-        </a>
-        <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="menu-link">
-          <span class="emoji">💼</span>
-          <span class="tooltip">LinkedIn</span>
-        </a>
-        <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="menu-link">
-          <span class="emoji">🎓</span>
-          <span class="tooltip">Superprof</span>
-        </a>
-        <a href="#about" class="menu-link">
-          <span class="emoji">🧩</span>
-          <span class="tooltip">&Agrave; propos</span>
-        </a>
-        <a href="#formations" class="menu-link">
-          <span class="emoji">📚</span>
-          <span class="tooltip">Formations propos&eacute;es</span>
-        </a>
-        <a href="#requirements" class="menu-link">
-          <span class="emoji">🧾</span>
-          <span class="tooltip">Pr&eacute;requis</span>
-        </a>
-        <a href="#about_me" class="menu-link">
-          <span class="emoji">🔎</span>
-          <span class="tooltip">&Agrave; propos de moi</span>
-        </a>
-        <a href="#tarifs" class="menu-link">
-          <span class="emoji">💶</span>
-          <span class="tooltip">Tarifs</span>
-        </a>
-        <a href="#booking" class="menu-link">
-          <span class="emoji">📆</span>
-          <span class="tooltip">R&eacute;server un cours</span>
-        </a>
-        <a href="#contact" class="menu-link">
-          <span class="emoji">✉️</span>
-          <span class="tooltip">Contact</span>
-        </a>
-      </nav>
-      <button id="menu-toggle" class="md:hidden focus:outline-none">
+      <!-- bouton -->
+      <button id="menu-toggle" class="md:hidden focus:outline-none flex space-x-4">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
     </div>
-    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
-      <a href="https://github.com/ftripoli" target="_blank" class="block py-2 hover:text-gray-300">🐙 GitHub</a>
-      <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="block py-2 hover:text-gray-300">💼 LinkedIn</a>
-      <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="menu-link">🎓 Superprof</a>
+    <div class="max-w-4xl mx-auto p-4">
+      <nav class="w-full">
+        <!-- Menu -->
+        <ul class="hidden md:flex items-center w-full">
+          <!-- Premier élément aligné à gauche -->
+          <li class="pr-4 mr-auto">
+            <a href="https://ftripoli.github.io/FormationsInformatiqueUniverselles/" class="menu-link">
+              <span class="emoji">🤖</span>
+              <span class="tooltip">F.I.U.</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="#about" class="menu-link">
+              <span class="emoji">🧩</span>
+              <span class="tooltip">&Agrave; propos</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="#formations" class="menu-link">
+              <span class="emoji">📚</span>
+              <span class="tooltip">Formations propos&eacute;es</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="#requirements" class="menu-link">
+              <span class="emoji">🧾</span>
+              <span class="tooltip">Pr&eacute;requis</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="#about_me" class="menu-link">
+              <span class="emoji">🔎</span>
+              <span class="tooltip">&Agrave; propos de moi</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="#tarifs" class="menu-link">
+              <span class="emoji">💶</span>
+              <span class="tooltip">Tarifs</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="#booking" class="menu-link">
+              <span class="emoji">📆</span>
+              <span class="tooltip">R&eacute;server un cours</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="#contact" class="menu-link">
+              <span class="emoji">✉️</span>
+              <span class="tooltip">Contact</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="https://github.com/ftripoli" target="_blank" class="menu-link">
+              <span class="emoji">🐙</span>
+              <span class="tooltip">GitHub</span>
+            </a>
+          </li>
+          <li class="px-4">
+            <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="menu-link">
+              <span class="emoji">💼</span>
+              <span class="tooltip">LinkedIn</span>
+            </a>
+          </li>
+          <li class="pl-4">
+            <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="menu-link">
+              <span class="emoji">🎓</span>
+              <span class="tooltip">Superprof</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 text-right ml-auto">
       <a href="#about" class="block py-2 hover:text-gray-300">🧩 &Agrave; propos</a>
       <a href="#formations" class="block py-2 hover:text-gray-300">📚 Formations propos&eacute;es</a>
       <a href="#requirements" class="block py-2 hover:text-gray-300">🧾 Pr&eacute;requis</a>
@@ -113,6 +153,9 @@
       <a href="#tarifs" class="block py-2 hover:text-gray-300">💶 Tarifs</a>
       <a href="#booking" class="block py-2 hover:text-gray-300">📆 R&eacute;server un cours</a>
       <a href="#contact" class="block py-2 hover:text-gray-300">✉️ Contact</a>
+      <a href="https://github.com/ftripoli" target="_blank" class="block py-2 hover:text-gray-300">🐙 GitHub</a>
+      <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="block py-2 hover:text-gray-300">💼 LinkedIn</a>
+      <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="block py-2 hover:text-gray-300">🎓 Superprof</a>
     </div>
   </header>
 
@@ -120,42 +163,58 @@
     <section id="about">
       <div class="bg-white p-6 rounded-lg shadow">
         <h2 class="text-3xl font-bold mb-4 text-center">🧩 &Agrave; propos</h2>
-        <p class="text-gray-700 text-lg leading-relaxed">
-          Au service de tous ceux qui souhaitent apprendre et/ou progresser en informatique, quel que soit leur &acirc;ge ou leur niveau.
-        </p>
-        <p class="mt-4">
-          Avec une approche bienveillante, claire et ludique, je propose des formations sur mesure pour que chacun puisse se sentir &agrave; l'aise et progresser &agrave; son rythme.
-        </p>
-        <p class="mt-4">
-          Passionn&eacute; par la transmission du savoir, je propose des formations accessibles et personnalis&eacute;es en programmation, outils num&eacute;riques, et logique informatique.
-        </p>
-        <p class="mt-4">
-          Mes s&eacute;ances sont con&ccedil;ues pour s’adapter au rythme, au niveau et aux objectifs de chacun.
-        </p>
-        <p class="mt-4">
-          Gr&acirc;ce &agrave; une approche bienveillante, ludique et vulgaris&eacute;e, j’aide chacun &agrave; progresser en confiance, que ce soit pour apprendre un langage informatique, se mettre &agrave; l’aise avec un ordinateur ou d&eacute;couvrir les bases de la logique.
-        </p>
-        <p class="mt-4">
-          Toutes les formations se font &agrave; distance, en visio, avec un simple ordinateur et une connexion Internet.
-        </p>
-        <p class="mt-4">
-          Venez apprendre &agrave; votre rythme, dans une ambiance conviviale et professionnelle !
-        </p>
-      </div>
-      <div class="relative">
-        <a href="#top" class="absolute bottom-4 right-4 text-blue-600 hover:underline text-sm">
-          ⬆️ Haut de page
-        </a>
+        <div class="text-gray-700 text-lg leading-relaxed">
+          <p class="mt-4">
+            Au service de tous ceux qui souhaitent apprendre et/ou progresser en informatique, quel que soit leur &acirc;ge ou leur niveau.
+          </p>
+          <p class="mt-4">
+            Avec une approche bienveillante, claire et ludique, je propose des formations sur mesure pour que chacun puisse se sentir &agrave; l'aise et progresser &agrave; son rythme.
+          </p>
+          <p class="mt-4">
+            Passionn&eacute; par la transmission du savoir, je propose des formations accessibles et personnalis&eacute;es en programmation, outils num&eacute;riques, et logique informatique.
+          </p>
+          <p class="mt-4">
+            Mes s&eacute;ances sont con&ccedil;ues pour s’adapter au rythme, au niveau et aux objectifs de chacun.
+          </p>
+          <p class="mt-4">
+            Gr&acirc;ce &agrave; une approche bienveillante, ludique et vulgaris&eacute;e, j’aide chacun &agrave; progresser en confiance, que ce soit pour apprendre un langage informatique, se mettre &agrave; l’aise avec un ordinateur ou d&eacute;couvrir les bases de la logique.
+          </p>
+          <p class="mt-4">
+            Toutes les formations se font &agrave; distance, en visio, avec un simple ordinateur et une connexion Internet.
+          </p>
+          <p class="mt-4">
+            Venez apprendre &agrave; votre rythme, dans une ambiance conviviale et professionnelle !
+          </p>
+        </div>
+        <div class="mt-4 text-right">
+            <a href="#top" class="text-blue-600 hover:underline text-sm">
+              ⬆️ Haut de page
+            </a>
+        </div>
       </div>
     </section>
 
     <section id="formations">
       <div class="bg-white p-6 rounded-lg shadow">
         <h2 class="text-3xl font-bold mb-4 text-center">📚 Formations propos&eacute;es</h2>
+        <div class="text-gray-700 text-lg leading-relaxed">
+          <p class="mt-4">
+            Vous avez un besoin sp&eacute;cifique ? Je propose aussi des cours personnalis&eacute;s selon vos envies ou votre contexte professionnel.
+          </p>
+          <p class="mt-4">
+            Je propose une vari&eacute;t&eacute; de cours accessibles &agrave; tous les profils : particuliers, professionnels, &eacute;tudiants ou jeunes curieux &agrave; partir de 7 ans.
+          </p>
+          <p class="mt-4">
+            Que vous souhaitiez d&eacute;couvrir la programmation, apprendre &agrave; utiliser un ordinateur, ou approfondir vos connaissances en outils num&eacute;riques, je m’adapte &agrave; votre rythme et vos objectifs.
+          </p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-3xl font-semibold mb-4 text-center">Des formules adapt&eacute;es &agrave; tous, en pr&eacute;sentiel ou &agrave; distance.</h3>
 
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="text-gray-700 text-lg leading-relaxed">
-            <h3 class="text-xl font-semibold">🖱️ Outils num&eacute;riques</h3>
+        <div class="grid gap-6 md:grid-cols-2 text-left">
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">🖱️ Outils num&eacute;riques</h3>
             <ul class="list-disc ml-6 mt-2 space-y-1">
               <li>Prise en main de l'ordinateur</li>
               <li>Utilisation d'Internet</li>
@@ -164,8 +223,8 @@
             </ul>
           </div>
 
-          <div class="text-gray-700 text-lg leading-relaxed">
-            <h3 class="text-xl font-semibold">💻 Programmation</h3>
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">💻 Programmation</h3>
             <ul class="list-disc ml-6 mt-2 space-y-1">
               <li>La Conception web (HTML, CSS...)</li>
               <li>La Programmation (PHP, JS, C, Python...)</li>
@@ -174,19 +233,35 @@
             </ul>
           </div>
 
-          <div class="text-gray-700 text-lg leading-relaxed">
-            <h3 class="text-xl font-semibold">🎮 Enfants d&egrave;s 7 ans</h3>
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">🎮 Enfants d&egrave;s 7 ans</h3>
             <ul class="list-disc ml-6 mt-2 space-y-1">
               <li>D&eacute;couverte du code (Scratch, Blockly)</li>
               <li>Logique et jeux cr&eacute;atifs</li>
             </ul>
           </div>
+
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">📏 Cours sur mesure</h3>
+            <ul class="list-disc ml-6 mt-2 space-y-1">
+              <li>Utilisation de Git et gestion de versions</li>
+              <li>Connexions s&eacute;curis&eacute;es via SSH</li>
+              <li>Cr&eacute;ation et gestion de machines virtuelles</li>
+              <li>Initiation aux syst&egrave;mes UNIX/Linux</li>
+              <li>D&eacute;ploiement d'applications web</li>
+              <li>Introduction aux APIs REST</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="relative">
-        <a href="#top" class="absolute bottom-4 right-4 text-blue-600 hover:underline text-sm">
-          ⬆️ Haut de page
-        </a>
+
+        <div class="mt-8 text-lg font-medium">
+          N’h&eacute;sitez pas &agrave; me contacter pour construire ensemble un programme de formation adapt&eacute; &agrave; vos besoins !
+        </div>
+        <div class="mt-4 text-right">
+            <a href="#top" class="text-blue-600 hover:underline text-sm">
+              ⬆️ Haut de page
+            </a>
+        </div>
       </div>
     </section>
 
@@ -208,11 +283,11 @@
             </ul>
           </div>
         </div>
-      </div>
-      <div class="relative">
-        <a href="#top" class="absolute bottom-4 right-4 text-blue-600 hover:underline text-sm">
-          ⬆️ Haut de page
-        </a>
+        <div class="mt-4 text-right">
+            <a href="#top" class="text-blue-600 hover:underline text-sm">
+              ⬆️ Haut de page
+            </a>
+        </div>
       </div>
     </section>
 
@@ -221,7 +296,7 @@
         <h2 class="text-3xl font-bold mb-4 text-center">🔎 &Agrave; propos de moi</h2>
         <div class="text-gray-700 text-lg leading-relaxed">
           <p class="mt-4">
-            D&eacute;veloppeur web senior depuis plus de 10 ans, je mets aujourd’hui mon expertise au service de la formation pour tous.
+            D&eacute;veloppeur web senior depuis plus de 15 ans, je mets aujourd’hui mon expertise au service de la formation pour tous.
           </p>
 
           <p class="mt-4">
@@ -243,92 +318,178 @@
           <p class="mt-4">
             Ma mission : <strong class="font-semibold">vous rendre autonome, &agrave; l’aise avec la technologie, et fier de vos progr&egrave;s</strong>.
           </p>
-        </div>
       </div>
-      <div class="relative">
-        <a href="#top" class="absolute bottom-4 right-4 text-blue-600 hover:underline text-sm">
-          ⬆️ Haut de page
-        </a>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-3xl font-semibold mb-4 text-center">Des formules adapt&eacute;es &agrave; tous les profils, en pr&eacute;sentiel ou &agrave; distance.</h3>
+
+        <div class="grid gap-6 md:grid-cols-2 text-left">
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">
+              🐙&nbsp;
+              <a href="https://github.com/ftripoli" target="_blank" class="menu-link hover:underline">
+                Mon GitHub
+              </a>
+            </h3>
+            <p>
+              <a href="https://github.com/ftripoli" target="_blank" class="menu-link hover:underline">
+                <span class="font-medium">D&eacute;couvre mon code</span>
+              </a>
+            </p>
+          </div>
+
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">
+              💼&nbsp;
+              <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="menu-link hover:underline">
+                Mon LinkedIn
+              </a>
+            </h3>
+            <p>
+              <a href="https://www.linkedin.com/in/fabrice-t-05445684/" target="_blank" class="menu-link hover:underline">
+                <span class="font-medium">D&eacute;couvre mon parcours pro</span>
+              </a>
+            </p>
+          </div>
+
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">
+              🎓&nbsp;
+              <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="menu-link hover:underline">
+                Mon Superprof
+              </a>
+            </h3>
+            <p>
+              <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="menu-link hover:underline">
+                <span class="font-medium">D&eacute;couvre ma p&eacute;dagogie <strong class="font-semibold text-green-600">(1h dessais offerte)</strong></span>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-lg font-medium">
+          N’h&eacute;sitez pas &agrave; me contacter pour construire ensemble un programme de formation adapt&eacute; &agrave; vos besoins !
+        </div>
+        <div class="mt-4 text-right">
+            <a href="#top" class="text-blue-600 hover:underline text-sm">
+              ⬆️ Haut de page
+            </a>
+        </div>
       </div>
     </section>
 
     <section id="tarifs">
       <div class="bg-white p-6 rounded-lg shadow">
         <h2 class="text-3xl font-bold mb-4 text-center">💶 Tarifs</h2>
-        <p class="text-gray-800 text-lg leading-relaxed">
-          Je propose un accompagnement personnalis&eacute;. Que vous soyez d&eacute;butant complet ou souhaitiez perfectionner vos comp&eacute;tences, je m’adapte &agrave; votre rythme et &agrave; vos objectifs.
-        </p>
-        <p class="mt-4">
-          Mes prestations commencent <strong class="font-semibold text-blue-600"> &agrave; partir de 15 € de l'heure</strong>, selon le niveau, les besoins sp&eacute;cifiques et le type d'accompagnement (en ligne ou &agrave; domicile).
-        </p>
-        <p class="mt-4">
-          🎁 Et pour bien d&eacute;marrer, <strong class="font-semibold text-green-600">la premi&egrave;re heure est toujours offerte</strong> ! L’occasion id&eacute;ale de faire connaissance, poser vos premi&egrave;res questions et d&eacute;couvrir ma p&eacute;dagogie.
-        </p>
-        <p class="mt-4">
-          Des forfaits ou tarifs adapt&eacute;s peuvent être envisag&eacute;s pour les suivis r&eacute;guliers ou les formations en groupe. N'h&eacute;sitez pas &agrave; me contacter pour un devis personnalis&eacute;.
-        </p>
+        <div class="text-gray-700 text-lg leading-relaxed">
+          <p class="mt-4">
+            Je propose un accompagnement personnalis&eacute;. Que vous soyez d&eacute;butant complet ou souhaitiez perfectionner vos comp&eacute;tences, je m’adapte &agrave; votre rythme et &agrave; vos objectifs.
+          </p>
+          <p class="mt-4">
+            Mes prestations commencent <strong class="font-semibold text-blue-600"> &agrave; partir de 15 € de l'heure</strong>, selon le niveau, les besoins sp&eacute;cifiques et le type d'accompagnement (en ligne ou &agrave; domicile).
+          </p>
+          <p class="mt-4">
+            🎁 Et pour bien d&eacute;marrer, <strong class="font-semibold text-green-600">la premi&egrave;re heure est toujours offerte</strong> ! L’occasion id&eacute;ale de faire connaissance, poser vos premi&egrave;res questions et d&eacute;couvrir ma p&eacute;dagogie.
+          </p>
+          <p class="mt-4">
+            Des forfaits ou tarifs adapt&eacute;s peuvent être envisag&eacute;s pour les suivis r&eacute;guliers ou les formations en groupe. N'h&eacute;sitez pas &agrave; me contacter pour un devis personnalis&eacute;.
+          </p>
+        </div>
       </div>
-      <div class="relative">
-        <a href="#top" class="absolute bottom-4 right-4 text-blue-600 hover:underline text-sm">
-          ⬆️ Haut de page
-        </a>
+      <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-3xl font-semibold mb-4 text-center">Des formules adapt&eacute;es &agrave; tous les profils, en pr&eacute;sentiel ou &agrave; distance.</h3>
+
+        <div class="grid gap-6 md:grid-cols-2 text-left">
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">Tarif horaire</h3>
+            <p><span class="font-medium">1h :</span> 20 €</p>
+          </div>
+
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">Packs</h3>
+            <p><span class="font-medium">5h :</span> 75 €</p>
+            <p><span class="font-medium">10h :</span> 150 €</p>
+          </div>
+
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">Webcam / Visio</h3>
+            <p><span class="font-medium">1h :</span> 15 €</p>
+          </div>
+
+          <div class="bg-gray-100 p-6 rounded-lg shadow">
+            <h3 class="text-xl font-semibold mb-2 text-blue-700">D&eacute;placements</h3>
+            <p><span class="font-medium">+ 30 €</span> (en suppl&eacute;ment)</p>
+          </div>
+        </div>
+
+        <div class="mt-8 text-lg font-medium text-green-600">
+          🎁 1h de cours offerte
+        </div>
+        <div class="mt-4 text-right">
+            <a href="#top" class="text-blue-600 hover:underline text-sm">
+              ⬆️ Haut de page
+            </a>
+        </div>
       </div>
     </section>
 
     <section id="booking">
       <div class="bg-white p-6 rounded-lg shadow">
         <h2 class="text-3xl font-bold mb-4 text-center">📆 R&eacute;server un cours</h2>
-        <p class="text-gray-600 mb-6">
-          R&eacute;servez directement une s&eacute;ance de formation via ma page Superprof. Que vous soyez d&eacute;butant, &eacute;tudiant, professionnel ou enfant &agrave; partir de 7 ans, je vous accompagne &agrave; votre rythme !
-        </p>
-        <div class="flex justify-center items-center">
-          <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
-            Acc&eacute;der &agrave; ma page Superprof
-          </a>
+        <div class="text-gray-700 text-lg leading-relaxed">
+          <p class="text-gray-600 mb-6">
+            R&eacute;servez directement une s&eacute;ance de formation via ma page Superprof. Que vous soyez d&eacute;butant, &eacute;tudiant, professionnel ou enfant &agrave; partir de 7 ans, je vous accompagne &agrave; votre rythme !
+          </p>
+          <div class="flex justify-center items-center">
+            <a href="https://www.superprof.fr/ir/36403739-f7d218/" target="_blank" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+              Acc&eacute;der &agrave; ma page Superprof
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="relative">
-        <a href="#top" class="absolute bottom-4 right-4 text-blue-600 hover:underline text-sm">
-          ⬆️ Haut de page
-        </a>
+        <div class="mt-4 text-right">
+            <a href="#top" class="text-blue-600 hover:underline text-sm">
+              ⬆️ Haut de page
+            </a>
+        </div>
       </div>
     </section>
 
     <section id="contact">
       <div class="bg-white p-6 rounded-lg shadow">
         <h2 class="text-3xl font-bold mb-4 text-center">✉️ Me contacter</h2>
-        <p class="text-gray-700 text-lg leading-relaxed mb-4">
-          Vous pouvez m’&eacute;crire directement via ce formulaire pour poser une question, planifier un rendez-vous ou r&eacute;server un cours en direct avec moi.
-        </p>
-        <form id="contact-form" class="space-y-4">
-          <div>
-            <label class="block font-medium">Nom</label>
-            <input type="text" name="name" placeholder="Votre nom" class="w-full mt-1 border rounded px-3 py-2" required>
-          </div>
-          <div>
-            <label class="block font-medium">Email</label>
-            <input type="email" name="email" placeholder="Votre email" class="w-full mt-1 border rounded px-3 py-2" required>
-          </div>
-          <div>
-            <label class="block font-medium">Message</label>
-            <textarea name="message" rows="4" placeholder="Votre message" class="w-full mt-1 border rounded px-3 py-2" required></textarea>
-          </div>
-          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-            Envoyer
-          </button>
-        </form>
-        <p class="mt-4 text-sm text-gray-500">Ou contactez-moi directement &agrave; : <strong class="font-semibold">formationsinformatiquepourtous@gmail.com</strong></p>
-      </div>
-      <div class="relative">
-        <a href="#top" class="absolute bottom-4 right-4 text-blue-600 hover:underline text-sm">
-          ⬆️ Haut de page
-        </a>
+        <div class="text-gray-700 text-lg leading-relaxed">
+          <p class="mt-4">
+            Vous pouvez m’&eacute;crire directement via ce formulaire pour poser une question, planifier un rendez-vous ou r&eacute;server un cours en direct avec moi.
+          </p>
+          <form id="contact-form" class="space-y-4">
+            <div>
+              <label class="block font-medium">Nom</label>
+              <input type="text" name="name" placeholder="Votre nom" class="w-full mt-1 border rounded px-3 py-2" required>
+            </div>
+            <div>
+              <label class="block font-medium">Email</label>
+              <input type="email" name="email" placeholder="Votre email" class="w-full mt-1 border rounded px-3 py-2" required>
+            </div>
+            <div>
+              <label class="block font-medium">Message</label>
+              <textarea name="message" rows="4" placeholder="Votre message" class="w-full mt-1 border rounded px-3 py-2" required></textarea>
+            </div>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+              Envoyer
+            </button>
+          </form>
+          <p class="mt-4 text-sm text-gray-500">Ou contactez-moi directement &agrave; : <strong class="font-semibold">formationsinformatiquepourtous@gmail.com</strong></p>
+        </div>
+        <div class="mt-4 text-right">
+            <a href="#top" class="text-blue-600 hover:underline text-sm">
+              ⬆️ Haut de page
+            </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="text-center text-sm text-gray-500 py-6 bg-gray-100">
-    © 2025 - Formation Informatique pour Tous
+    © 2025 - Formation Informatique Universelles
   </footer>
 
   <script>
